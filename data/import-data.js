@@ -1,0 +1,54 @@
+const fs = require("fs");
+const path = require("path");
+require("dotenv").config({ path: "../.env" });
+const connectToMongoDB = require("../db");
+
+const User = require("../models/userModel");
+
+connectToMongoDB()
+  .then(() => {
+    console.log("Connection to MongoDB is successful.");
+    // READ JSON FILE
+
+    const users = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "users.json"), "utf-8")
+    );
+
+    // IMPORT DATA INTO DB
+    const importData = async function () {
+      try {
+        await User.create(users);
+        console.log("Data successfully uploaded!");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        process.exit();
+      }
+    };
+
+    // OFFLOAD DATA FROM COLLECTION
+    const offloadData = async function () {
+      try {
+        await User.deleteMany({});
+        console.log("Data successfully offloaded!");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        process.exit();
+      }
+    };
+
+    // RUNS THE importData FUNCTION, if process.argv[2] equals "--import"
+    process.argv[2] === "--import" && importData();
+
+    // RUNS THE offloadData FUNCTION, if process.argv[2] equals "--offload"
+    process.argv[2] === "--offload" && offloadData();
+
+    // console.log(process.argv);
+  })
+  .catch((error) => {
+    console.log(
+      error.message || error,
+      "Connection to MongoDB was unsuccessful."
+    );
+  });

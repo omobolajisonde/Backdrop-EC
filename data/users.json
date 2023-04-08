@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Sonde Omobolaji",
+    "email": "omobolajisonde@gmail.com",
+    "role": "admin",
+    "is_verified": false
+  },
+  {
+    "name": "Lourdes Browning",
+    "email": "loulou@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Sophie Louise Hart",
+    "email": "sophie@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Ayla Cornell",
+    "email": "ayls@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Leo Gillespie",
+    "email": "leo@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Jennifer Hardy",
+    "email": "jennifer@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Kate Morrison",
+    "email": "kate@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Eliana Stout",
+    "email": "eliana@example.com",
+    "role": "user",
+    "is_verified": false
+  },
+  {
+    "name": "Cristian Vega",
+    "email": "chris@example.com",
+    "role": "user",
+    "is_verified": false
+  }
+]
