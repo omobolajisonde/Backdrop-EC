@@ -22,7 +22,13 @@ const HOST = process.env.HOST || "localhost";
     await connectToMongoDB();
     // Root Route
     app.get("/", (req, res, next) => {
-      res.status(200).json({ message: "Welcome to Backdrop 🖼." });
+      res
+        .status(200)
+        .json({
+          status: "success",
+          message:
+            "Welcome to Backdrop 🖼. Go to /graphql to access the GraphQL API.",
+        });
     });
     app.listen(PORT, HOST, () => {
       console.log(`❄ Server started on port, ${PORT}.`);

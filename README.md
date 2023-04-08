@@ -33,8 +33,8 @@
   ├── tests
   │   ├── graphql.test.js
   ├── data
-  │   ├── import-data.js *** File to be run independently to populate the "user" collection with users data or to offload the "user" collection.
-  └── └── users.json
+      ├── import-data.js *** File to be run independently to populate the "user" collection with users data or to offload the "user" collection.
+      └── users.json
 ```
 
 ## Getting Started Locally
