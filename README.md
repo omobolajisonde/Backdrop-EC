@@ -101,6 +101,13 @@ npm run dev
 Visit http://127.0.0.1:5000/ or http://localhost:8080/ on your browser.
 
 ---
+## Testing
+In order to run tests, navigate to the root directory and run the following commands:
+``` bash
+npm test
+```
+![testResult](./testResult.png)
+>**Note** - All tests are in the `tests` folder.
 
 ## API Reference
 ### Endpoints
@@ -154,7 +161,7 @@ mutation {
 }
 ```
 ## Deployment
-N/A
+https://backdrop-ec.onrender.com
 
 ## Authors
 [Sonde Omobolaji](https://github.com/omobolajisonde) 
