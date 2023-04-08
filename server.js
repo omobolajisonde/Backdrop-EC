@@ -12,7 +12,11 @@ const HOST = process.env.HOST || "localhost";
 (async () => {
   try {
     const app = express();
-    const apolloServer = new ApolloServer({ typeDefs, resolvers });
+    const apolloServer = new ApolloServer({
+      typeDefs,
+      resolvers,
+      persistedQueries: false,
+    });
     await apolloServer.start();
     apolloServer.applyMiddleware({ app, path: "/graphql" });
     await connectToMongoDB();
